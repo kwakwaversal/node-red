@@ -206,7 +206,7 @@ describe('Node', function() {
                 } else {
                     // second msg sent, clone
                     msg.payload.should.equal(messages[rcvdCount].payload);
-                    should.notStrictEqual(msg,messages[rcvdCount]);
+                    should.strictEqual(msg,messages[rcvdCount]);
                     done();
                 }
             });
